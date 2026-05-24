@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>PulseDesk</title>
+</head>
+
+<body>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        Pulse Desk
+      </div>
+      <ul class="sidebar-links">
+        <li><a href="#dashboard" class="active">Dashboard</a></li>
+        <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#messages">Messages</a></li>
+        <li><a href="#settings">Settings</a></li>
+      </ul>
+    </aside>
+    <div class="main-content">
+      <header class="top-bar">
+        <div class="search">Search</div>
+        <div class="top-actions">
+          <div class="notifications">Notifications</div>
+          <a href="#"><img src="" alt="User Image"></a>
+        </div>
+      </header>
+      <main class="dashboard" id="dashboard">
+        <div class="dashboard-header">
+          <h1>Dashboard</h1>
+          <p>Monitor operational performance and team activity.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Revenue</h3>
+            <p class="stat-number">$24.8K</p>
+            <p><span>+8.2%</span> this month</p>
+          </div>
+          <div class="stat-card">
+            <h3>Users</h3>
+            <p class="stat-number">1,284</p>
+            <p><span>+12%</span> this month</p>
+          </div>
+          <div class="stat-card">
+            <h3>Performance</h3>
+            <p class="stat-number">98%</p>
+            <p><span>+3.1%</span> this month</p>
+          </div>
+          <div class="stat-card">
+            <h3>Tickets</h3>
+            <p class="stat-number">14</p>
+            <p><span class="negative"> -6 </span> this month</p>
+          </div>
+        </div>
+        <div class="dashboard-section" id="analytics">
+          <div class="section-header">
+            <h2>Analytics</h2>
+            <p>Track recent activity and operational priorities.</p>
+          </div>
+        </div>
+        <div class="dashboard-row">
+          <div class="panel activity-panel">
+            <h3>Activity Feed</h3>
+            <div class="activity-list">
+              <div class="activity-item">
+                <p><strong>Revenue report</strong> was updated.</p>
+                <span>8 minutes ago</span>
+              </div>
+              <div class="activity-item">
+                <p><strong>New project</strong> was created.</p>
+                <span>24 minutes ago</span>
+              </div>
+              <div class="activity-item">
+                <p><strong>Support ticket</strong> was escalated.</p>
+                <span>1 hour ago</span>
+              </div>
+            </div>
+          </div>
+          <div class="panel tasks-panel">
+            <h3>Tasks</h3>
+            <div class="tasks-list">
+              <label class="task-item">
+                <input type="checkbox">
+                <span>Review weekly metrics</span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox">
+                <span>Respond to support tickets</span>
+              </label>
+              <label class="task-item">
+                <input type="checkbox">
+                <span>Update project roadmap</span>
+              </label>
+              <button class="btn-disabled" disabled>Sync Tasks</button>
+            </div>
+          </div>
+        </div>
+        <!-- Projects -->
+        <section class="dashboard-section" id="projects">
+          <div class="section-header">
+            <h2>Projects</h2>
+            <p>Track active project ownership, status, and deadlines.</p>
+          </div>
+          <div class="panel table-panel">
+            <div class="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Project</th>
+                    <th>Owner</th>
+                    <th>Status</th>
+                    <th>Due Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Client Portal</td>
+                    <td>Jamie Lee</td>
+                    <td><span class="status-badge active">Active</span></td>
+                    <td>May 30</td>
+                  </tr>
+                  <tr>
+                    <td>Analytics Refresh</td>
+                    <td>Morgan Chen</td>
+                    <td><span class="status-badge pending">Pending</span></td>
+                    <td>Jun 08</td>
+                  </tr>
+
+                  <tr>
+                    <td>Support Workflow</td>
+                    <td>Alex Rivera</td>
+                    <td><span class="status-badge delayed">Delayed</span></td>
+                    <td>Jun 14</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+        <!-- Messages -->
+        <section class="dashboard-section" id="messages">
+          <div class="section-header">
+            <h2>Messages</h2>
+            <p>Recent team communication and updates</p>
+          </div>
+          <div class="panel messages-panel">
+            <div class="message-item">
+              <div class="avatar">JL</div>
+              <div class="message-content">
+                <div class="message-header">
+                  <h3>Jamie Lee</h3>
+                  <span>12 min ago</span>
+                </div>
+                <p>Uploaded the latest client portal review notes.</p>
+              </div>
+            </div>
+            <div class="message-item">
+              <div class="avatar">MC</div>
+              <div class="message-content">
+                <div class="message-header">
+                  <h3>Morgan Chen</h3>
+                  <span>38 min ago</span>
+                </div>
+                <p>Requested feedback on the analytics refresh timeline.</p>
+              </div>
+            </div>
+            <div class="message-item">
+              <div class="avatar">AR</div>
+              <div class="message-content">
+                <div class="message-header">
+                  <h3>Alex Rivera</h3>
+                  <span>1 hr ago</span>
+                </div>
+                <p>Flagged a delayed support workflow milestone.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Settings -->
+        <section class="dashboard-section" id="settings">
+          <div class="section-header">
+            <h2>Settings</h2>
+            <p>Manage workspace preferences and account controls.</p>
+          </div>
+          <div class="settings-grid">
+            <div class="panel settings-card">
+              <h3>Notifications</h3>
+              <p>Configure alerts, reminders, and email updates.</p>
+              <button class="settings-button">Manage Alerts</button>
+            </div>
+
+            <div class="panel settings-card">
+              <h3>Theme</h3>
+              <p>Customize dashboard appearance and interface density.</p>
+              <button class="settings-button">Change Theme</button>
+            </div>
+
+            <div class="panel settings-card">
+              <h3>Team Access</h3>
+              <p>Review permissions, roles, and collaboration settings.</p>
+              <button class="settings-button">Manage Team</button>
+            </div>
+          </div>
+        </section>
+        <!-- UI States -->
+        <section class="dashboard-section">
+          <div class="section-header">
+            <h2>UI States</h2>
+            <p>Examples of loading, empty, and error handling states.</p>
+          </div>
+
+          <div class="states-grid">
+
+            <div class="panel state-card">
+              <!-- loading -->
+              <h3>Loading Analytics...</h3>
+              <p>Please wait while dashboard metrics are synced.</p>
+
+              <div class="loading-bars">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+
+            <div class="panel state-card">
+              <!-- empty -->
+              <h3>No Messages Found</h3>
+              <p>Your inbox is currently clear.</p>
+
+              <button class="settings-button">
+                Refresh Inbox
+              </button>
+            </div>
+
+            <div class="panel state-card">
+              <!-- error -->
+              <h3>Sync Failed</h3>
+              <p>Unable to retrieve project metrics.</p>
+
+              <button class="error-button">
+                Retry Sync
+              </button>
+            </div>
+
+          </div>
+        </section>
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+          <p>PulseDesk Dashboard V1</p>
+          <span>Built with HTML and modern CSS.</span>
+        </footer>
+      </main>
+
+    </div>
+
+    </main>
+  </div>
+</body>
+
+</html>
