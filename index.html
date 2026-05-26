@@ -4,263 +4,848 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="stylesheet" href="css/output.css">
+
   <title>PulseDesk</title>
 </head>
 
-<body>
-  <div class="app-layout">
-    <aside class="sidebar">
-      <div class="sidebar-logo">
-        Pulse Desk
+<body class="bg-slate-100 text-slate-950 antialiased">
+
+  <div class="min-h-screen lg:grid lg:grid-cols-[260px_1fr]">
+
+    <!-- Sidebar -->
+    <aside class="border-b border-slate-800 bg-slate-950 p-5 text-slate-50 lg:min-h-screen lg:border-b-0 lg:border-r">
+
+      <div class="mb-8 text-xl font-bold tracking-tight">
+        PulseDesk
       </div>
-      <ul class="sidebar-links">
-        <li><a href="#dashboard" class="active">Dashboard</a></li>
-        <li><a href="#analytics">Analytics</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#messages">Messages</a></li>
-        <li><a href="#settings">Settings</a></li>
-      </ul>
+
+      <nav aria-label="Dashboard navigation">
+        <ul class="flex flex-wrap gap-2 lg:flex-col">
+
+          <li>
+            <a href="#dashboard" class="block rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white">
+              Dashboard
+            </a>
+          </li>
+
+          <li>
+            <a href="#analytics"
+              class="block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">
+              Analytics
+            </a>
+          </li>
+
+          <li>
+            <a href="#projects"
+              class="block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">
+              Projects
+            </a>
+          </li>
+
+          <li>
+            <a href="#messages"
+              class="block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">
+              Messages
+            </a>
+          </li>
+
+          <li>
+            <a href="#settings"
+              class="block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white">
+              Settings
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
     </aside>
-    <div class="main-content">
-      <header class="top-bar">
-        <div class="search">Search</div>
-        <div class="top-actions">
-          <div class="notifications">Notifications</div>
-          <a href="#"><img src="" alt="User Image"></a>
+
+    <!-- Main Content -->
+    <div class="min-w-0">
+
+      <!-- Top Bar -->
+      <header class="border-b border-slate-200 bg-white px-5 py-4">
+
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+
+          <div>
+            <label for="search" class="sr-only">
+              Search dashboard
+            </label>
+
+            <input id="search" type="search" placeholder="Search dashboard..."
+              class="w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:bg-white md:w-80">
+          </div>
+
+          <div class="flex items-center gap-3">
+
+            <button type="button"
+              class="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-600">
+              Notifications
+            </button>
+
+            <a href="#settings" aria-label="Open user settings"
+              class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+              JC
+            </a>
+
+          </div>
+
         </div>
+
       </header>
-      <main class="dashboard" id="dashboard">
-        <div class="dashboard-header">
-          <h1>Dashboard</h1>
-          <p>Monitor operational performance and team activity.</p>
+
+      <!-- Dashboard -->
+      <main id="dashboard" class="p-5 lg:p-8">
+
+        <!-- Dashboard Header -->
+        <div class="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+
+          <div>
+
+            <p class="mb-2 text-sm font-bold uppercase tracking-[0.08em] text-blue-600">
+              Operations Dashboard
+            </p>
+
+            <h1 class="text-4xl font-bold tracking-[-0.04em] text-slate-950">
+              Team performance overview
+            </h1>
+
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-slate-600">
+              Monitor operational metrics, team activity, project status,
+              and workflow health across the PulseDesk platform.
+            </p>
+
+          </div>
+
+          <div class="flex flex-wrap gap-3">
+
+            <button
+              class="inline-flex min-h-[44px] items-center justify-center rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700">
+              Export Report
+            </button>
+
+            <button
+              class="inline-flex min-h-[44px] items-center justify-center rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-600">
+              Create Project
+            </button>
+
+          </div>
+
         </div>
-        <div class="stats-grid">
-          <div class="stat-card">
-            <h3>Revenue</h3>
-            <p class="stat-number">$24.8K</p>
-            <p><span>+8.2%</span> this month</p>
-          </div>
-          <div class="stat-card">
-            <h3>Users</h3>
-            <p class="stat-number">1,284</p>
-            <p><span>+12%</span> this month</p>
-          </div>
-          <div class="stat-card">
-            <h3>Performance</h3>
-            <p class="stat-number">98%</p>
-            <p><span>+3.1%</span> this month</p>
-          </div>
-          <div class="stat-card">
-            <h3>Tickets</h3>
-            <p class="stat-number">14</p>
-            <p><span class="negative"> -6 </span> this month</p>
-          </div>
+
+        <!-- Stats -->
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+
+          <article
+            class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+
+            <p class="text-sm font-semibold text-slate-500">
+              Revenue
+            </p>
+
+            <p class="mt-3 text-3xl font-bold tracking-tight text-slate-950">
+              $24.8K
+            </p>
+
+            <p class="mt-3 text-sm text-slate-500">
+              <span class="font-bold text-green-600">+8.2%</span> this month
+            </p>
+
+          </article>
+
+          <article
+            class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+
+            <p class="text-sm font-semibold text-slate-500">
+              Users
+            </p>
+
+            <p class="mt-3 text-3xl font-bold tracking-tight text-slate-950">
+              1,284
+            </p>
+
+            <p class="mt-3 text-sm text-slate-500">
+              <span class="font-bold text-green-600">+12%</span> this month
+            </p>
+
+          </article>
+
+          <article
+            class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+
+            <p class="text-sm font-semibold text-slate-500">
+              Performance
+            </p>
+
+            <p class="mt-3 text-3xl font-bold tracking-tight text-slate-950">
+              98%
+            </p>
+
+            <p class="mt-3 text-sm text-slate-500">
+              <span class="font-bold text-green-600">+3.1%</span> this month
+            </p>
+
+          </article>
+
+          <article
+            class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-md">
+
+            <p class="text-sm font-semibold text-slate-500">
+              Tickets
+            </p>
+
+            <p class="mt-3 text-3xl font-bold tracking-tight text-slate-950">
+              14
+            </p>
+
+            <p class="mt-3 text-sm text-slate-500">
+              <span class="font-bold text-red-600">-6</span> this month
+            </p>
+
+          </article>
+
         </div>
-        <div class="dashboard-section" id="analytics">
-          <div class="section-header">
-            <h2>Analytics</h2>
-            <p>Track recent activity and operational priorities.</p>
+
+        <!-- Analytics -->
+        <section id="analytics" class="mt-8">
+
+          <div class="mb-6">
+
+            <p class="text-sm font-bold uppercase tracking-[0.08em] text-blue-600">
+              Analytics
+            </p>
+
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">
+              Operational insights
+            </h2>
+
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-slate-600">
+              Track recent activity, operational priorities,
+              and workflow health across the platform.
+            </p>
+
           </div>
-        </div>
-        <div class="dashboard-row">
-          <div class="panel activity-panel">
-            <h3>Activity Feed</h3>
-            <div class="activity-list">
-              <div class="activity-item">
-                <p><strong>Revenue report</strong> was updated.</p>
-                <span>8 minutes ago</span>
+
+        </section>
+
+        <!-- Activity + Tasks -->
+        <div class="mt-8 grid gap-4 xl:grid-cols-[1.6fr_1fr]">
+
+          <!-- Activity Feed -->
+          <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+
+            <div class="mb-6 flex items-center justify-between gap-4">
+
+              <div>
+
+                <p class="text-sm font-bold uppercase tracking-[0.08em] text-blue-600">
+                  Activity Feed
+                </p>
+
+                <h2 class="mt-2 text-2xl font-bold text-slate-950">
+                  Recent operational activity
+                </h2>
+
               </div>
-              <div class="activity-item">
-                <p><strong>New project</strong> was created.</p>
-                <span>24 minutes ago</span>
-              </div>
-              <div class="activity-item">
-                <p><strong>Support ticket</strong> was escalated.</p>
-                <span>1 hour ago</span>
-              </div>
+
+              <button
+                class="rounded-xl border border-slate-200 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-600">
+                View All
+              </button>
+
             </div>
-          </div>
-          <div class="panel tasks-panel">
-            <h3>Tasks</h3>
-            <div class="tasks-list">
-              <label class="task-item">
-                <input type="checkbox">
-                <span>Review weekly metrics</span>
-              </label>
-              <label class="task-item">
-                <input type="checkbox">
-                <span>Respond to support tickets</span>
-              </label>
-              <label class="task-item">
-                <input type="checkbox">
-                <span>Update project roadmap</span>
-              </label>
-              <button class="btn-disabled" disabled>Sync Tasks</button>
+
+            <div class="flex flex-col gap-4">
+
+              <article class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+
+                <p class="font-medium text-slate-950">
+                  <span class="font-bold text-blue-600">
+                    Revenue report
+                  </span>
+                  was updated.
+                </p>
+
+                <p class="mt-2 text-sm text-slate-500">
+                  8 minutes ago
+                </p>
+
+              </article>
+
+              <article class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+
+                <p class="font-medium text-slate-950">
+                  <span class="font-bold text-blue-600">
+                    New project
+                  </span>
+                  was created.
+                </p>
+
+                <p class="mt-2 text-sm text-slate-500">
+                  24 minutes ago
+                </p>
+
+              </article>
+
+              <article class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+
+                <p class="font-medium text-slate-950">
+                  <span class="font-bold text-blue-600">
+                    Support ticket
+                  </span>
+                  was escalated.
+                </p>
+
+                <p class="mt-2 text-sm text-slate-500">
+                  1 hour ago
+                </p>
+
+              </article>
+
             </div>
-          </div>
+
+          </section>
+
+          <!-- Tasks -->
+          <section class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+
+            <div class="mb-6">
+
+              <p class="text-sm font-bold uppercase tracking-[0.08em] text-blue-600">
+                Tasks
+              </p>
+
+              <h2 class="mt-2 text-2xl font-bold text-slate-950">
+                Team priorities
+              </h2>
+
+            </div>
+
+            <div class="flex flex-col gap-4">
+
+              <label class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <input type="checkbox" class="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                <span class="text-slate-700">Review weekly metrics</span>
+              </label>
+
+              <label class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <input type="checkbox" class="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                <span class="text-slate-700">Respond to support tickets</span>
+              </label>
+
+              <label class="flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <input type="checkbox" class="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-blue-500">
+                <span class="text-slate-700">Update project roadmap</span>
+              </label>
+
+              <button disabled
+                class="mt-2 inline-flex min-h-[44px] items-center justify-center rounded-xl bg-slate-200 px-5 py-3 text-sm font-semibold text-slate-500">
+                Sync Tasks
+              </button>
+
+            </div>
+
+          </section>
+
         </div>
+
         <!-- Projects -->
-        <section class="dashboard-section" id="projects">
-          <div class="section-header">
-            <h2>Projects</h2>
-            <p>Track active project ownership, status, and deadlines.</p>
+        <section id="projects" class="mt-8">
+
+          <div class="mb-6">
+
+            <p class="text-sm font-bold uppercase tracking-[0.08em] text-blue-600">
+              Projects
+            </p>
+
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">
+              Active project tracking
+            </h2>
+
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-slate-600">
+              Monitor ownership, delivery status, and operational deadlines
+              across active initiatives.
+            </p>
+
           </div>
-          <div class="panel table-panel">
-            <div class="table-wrapper">
-              <table>
-                <thead>
+
+          <section class="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+
+            <div class="overflow-x-auto">
+
+              <table class="min-w-full border-collapse">
+
+                <thead class="border-b border-slate-200 bg-slate-50">
+
                   <tr>
-                    <th>Project</th>
-                    <th>Owner</th>
-                    <th>Status</th>
-                    <th>Due Date</th>
+
+                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-500">
+                      Project
+                    </th>
+
+                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-500">
+                      Owner
+                    </th>
+
+                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-500">
+                      Status
+                    </th>
+
+                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-500">
+                      Due Date
+                    </th>
+
                   </tr>
+
                 </thead>
-                <tbody>
-                  <tr>
-                    <td>Client Portal</td>
-                    <td>Jamie Lee</td>
-                    <td><span class="status-badge active">Active</span></td>
-                    <td>May 30</td>
-                  </tr>
-                  <tr>
-                    <td>Analytics Refresh</td>
-                    <td>Morgan Chen</td>
-                    <td><span class="status-badge pending">Pending</span></td>
-                    <td>Jun 08</td>
+
+                <tbody class="divide-y divide-slate-200">
+
+                  <tr class="transition hover:bg-slate-50">
+
+                    <td class="px-6 py-5 font-semibold text-slate-950">
+                      Client Portal
+                    </td>
+
+                    <td class="px-6 py-5 text-slate-600">
+                      Jamie Lee
+                    </td>
+
+                    <td class="px-6 py-5">
+                      <span
+                        class="inline-flex rounded-full bg-green-100 px-3 py-1 text-sm font-semibold text-green-700">
+                        Active
+                      </span>
+                    </td>
+
+                    <td class="px-6 py-5 text-slate-600">
+                      May 30
+                    </td>
+
                   </tr>
 
-                  <tr>
-                    <td>Support Workflow</td>
-                    <td>Alex Rivera</td>
-                    <td><span class="status-badge delayed">Delayed</span></td>
-                    <td>Jun 14</td>
+                  <tr class="transition hover:bg-slate-50">
+
+                    <td class="px-6 py-5 font-semibold text-slate-950">
+                      Analytics Refresh
+                    </td>
+
+                    <td class="px-6 py-5 text-slate-600">
+                      Morgan Chen
+                    </td>
+
+                    <td class="px-6 py-5">
+                      <span
+                        class="inline-flex rounded-full bg-orange-100 px-3 py-1 text-sm font-semibold text-orange-700">
+                        Pending
+                      </span>
+                    </td>
+
+                    <td class="px-6 py-5 text-slate-600">
+                      Jun 08
+                    </td>
+
                   </tr>
+
+                  <tr class="transition hover:bg-slate-50">
+
+                    <td class="px-6 py-5 font-semibold text-slate-950">
+                      Support Workflow
+                    </td>
+
+                    <td class="px-6 py-5 text-slate-600">
+                      Alex Rivera
+                    </td>
+
+                    <td class="px-6 py-5">
+                      <span class="inline-flex rounded-full bg-red-100 px-3 py-1 text-sm font-semibold text-red-700">
+                        Delayed
+                      </span>
+                    </td>
+
+                    <td class="px-6 py-5 text-slate-600">
+                      Jun 14
+                    </td>
+
+                  </tr>
+
                 </tbody>
+
               </table>
+
             </div>
-          </div>
+
+          </section>
+
         </section>
+
         <!-- Messages -->
-        <section class="dashboard-section" id="messages">
-          <div class="section-header">
-            <h2>Messages</h2>
-            <p>Recent team communication and updates</p>
+        <section id="messages" class="mt-8">
+
+          <div class="mb-6">
+
+            <p class="text-sm font-bold uppercase tracking-[0.08em] text-blue-600">
+              Messages
+            </p>
+
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">
+              Team communication
+            </h2>
+
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-slate-600">
+              Recent updates from project owners and operational contributors.
+            </p>
+
           </div>
-          <div class="panel messages-panel">
-            <div class="message-item">
-              <div class="avatar">JL</div>
-              <div class="message-content">
-                <div class="message-header">
-                  <h3>Jamie Lee</h3>
-                  <span>12 min ago</span>
+
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+
+            <div class="flex flex-col divide-y divide-slate-200">
+
+              <article class="flex gap-4 pb-5">
+
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                  JL
                 </div>
-                <p>Uploaded the latest client portal review notes.</p>
-              </div>
-            </div>
-            <div class="message-item">
-              <div class="avatar">MC</div>
-              <div class="message-content">
-                <div class="message-header">
-                  <h3>Morgan Chen</h3>
-                  <span>38 min ago</span>
+
+                <div class="min-w-0 flex-1">
+
+                  <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+
+                    <h3 class="font-bold text-slate-950">
+                      Jamie Lee
+                    </h3>
+
+                    <p class="text-sm text-slate-500">
+                      12 min ago
+                    </p>
+
+                  </div>
+
+                  <p class="mt-2 text-slate-600">
+                    Uploaded the latest client portal review notes.
+                  </p>
+
                 </div>
-                <p>Requested feedback on the analytics refresh timeline.</p>
-              </div>
-            </div>
-            <div class="message-item">
-              <div class="avatar">AR</div>
-              <div class="message-content">
-                <div class="message-header">
-                  <h3>Alex Rivera</h3>
-                  <span>1 hr ago</span>
+
+              </article>
+
+              <article class="flex gap-4 py-5">
+
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                  MC
                 </div>
-                <p>Flagged a delayed support workflow milestone.</p>
-              </div>
+
+                <div class="min-w-0 flex-1">
+
+                  <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+
+                    <h3 class="font-bold text-slate-950">
+                      Morgan Chen
+                    </h3>
+
+                    <p class="text-sm text-slate-500">
+                      38 min ago
+                    </p>
+
+                  </div>
+
+                  <p class="mt-2 text-slate-600">
+                    Requested feedback on the analytics refresh timeline.
+                  </p>
+
+                </div>
+
+              </article>
+
+              <article class="flex gap-4 pt-5">
+
+                <div
+                  class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
+                  AR
+                </div>
+
+                <div class="min-w-0 flex-1">
+
+                  <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+
+                    <h3 class="font-bold text-slate-950">
+                      Alex Rivera
+                    </h3>
+
+                    <p class="text-sm text-slate-500">
+                      1 hr ago
+                    </p>
+
+                  </div>
+
+                  <p class="mt-2 text-slate-600">
+                    Flagged a delayed support workflow milestone.
+                  </p>
+
+                </div>
+
+              </article>
+
             </div>
+
           </div>
+
         </section>
+
         <!-- Settings -->
-        <section class="dashboard-section" id="settings">
-          <div class="section-header">
-            <h2>Settings</h2>
-            <p>Manage workspace preferences and account controls.</p>
-          </div>
-          <div class="settings-grid">
-            <div class="panel settings-card">
-              <h3>Notifications</h3>
-              <p>Configure alerts, reminders, and email updates.</p>
-              <button class="settings-button">Manage Alerts</button>
-            </div>
+        <section id="settings" class="mt-8">
 
-            <div class="panel settings-card">
-              <h3>Theme</h3>
-              <p>Customize dashboard appearance and interface density.</p>
-              <button class="settings-button">Change Theme</button>
-            </div>
+          <div class="mb-6">
 
-            <div class="panel settings-card">
-              <h3>Team Access</h3>
-              <p>Review permissions, roles, and collaboration settings.</p>
-              <button class="settings-button">Manage Team</button>
-            </div>
-          </div>
-        </section>
-        <!-- UI States -->
-        <section class="dashboard-section">
-          <div class="section-header">
-            <h2>UI States</h2>
-            <p>Examples of loading, empty, and error handling states.</p>
+            <p class="text-sm font-bold uppercase tracking-[0.08em] text-blue-600">
+              Settings
+            </p>
+
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">
+              Workspace configuration
+            </h2>
+
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-slate-600">
+              Manage notifications, workspace appearance,
+              and collaboration controls.
+            </p>
+
           </div>
 
-          <div class="states-grid">
+          <div class="grid gap-4 lg:grid-cols-3">
 
-            <div class="panel state-card">
-              <!-- loading -->
-              <h3>Loading Analytics...</h3>
-              <p>Please wait while dashboard metrics are synced.</p>
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
 
-              <div class="loading-bars">
-                <span></span>
-                <span></span>
-                <span></span>
+              <div
+                class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl text-blue-600">
+                🔔
               </div>
-            </div>
 
-            <div class="panel state-card">
-              <!-- empty -->
-              <h3>No Messages Found</h3>
-              <p>Your inbox is currently clear.</p>
+              <h3 class="text-2xl font-bold text-slate-950">
+                Notifications
+              </h3>
 
-              <button class="settings-button">
+              <p class="mt-3 leading-7 text-slate-600">
+                Configure alerts, reminders, escalation notices,
+                and email updates.
+              </p>
+
+              <button
+                class="mt-auto inline-flex min-h-[44px] items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-600">
+                Manage Alerts
+              </button>
+
+            </article>
+
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+
+              <div
+                class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl text-blue-600">
+                🎨
+              </div>
+
+              <h3 class="text-2xl font-bold text-slate-950">
+                Theme
+              </h3>
+
+              <p class="mt-3 leading-7 text-slate-600">
+                Customize dashboard appearance, layout density,
+                and interface preferences.
+              </p>
+
+              <button
+                class="mt-auto inline-flex min-h-[44px] items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-600">
+                Change Theme
+              </button>
+
+            </article>
+
+            <article class="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+
+              <div
+                class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl text-blue-600">
+                👥
+              </div>
+
+              <h3 class="text-2xl font-bold text-slate-950">
+                Team Access
+              </h3>
+
+              <p class="mt-3 leading-7 text-slate-600">
+                Review permissions, workspace roles,
+                and operational collaboration settings.
+              </p>
+
+              <button
+                class="mt-auto inline-flex min-h-[44px] items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-600">
+                Manage Team
+              </button>
+
+            </article>
+
+          </div>
+
+        </section>
+
+        <!-- UI States -->
+        <section class="mt-8">
+
+          <div class="mb-6">
+
+            <p class="text-sm font-bold uppercase tracking-[0.08em] text-blue-600">
+              UI States
+            </p>
+
+            <h2 class="mt-2 text-3xl font-bold tracking-tight text-slate-950">
+              Operational state handling
+            </h2>
+
+            <p class="mt-3 max-w-2xl text-lg leading-8 text-slate-600">
+              Examples of loading, empty, and error states commonly found
+              in operational dashboards.
+            </p>
+
+          </div>
+
+          <div class="grid gap-4 lg:grid-cols-3">
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+
+              <div
+                class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl text-blue-600">
+                ⏳
+              </div>
+
+              <h3 class="text-2xl font-bold text-slate-950">
+                Loading Analytics
+              </h3>
+
+              <p class="mt-3 leading-7 text-slate-600">
+                Dashboard metrics are currently syncing from operational services.
+              </p>
+
+              <div class="mt-6 flex flex-col gap-3">
+                <span class="h-3 rounded-full bg-slate-200"></span>
+                <span class="h-3 w-5/6 rounded-full bg-slate-200"></span>
+                <span class="h-3 w-2/3 rounded-full bg-slate-200"></span>
+              </div>
+
+            </article>
+
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+
+              <div
+                class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-2xl text-blue-600">
+                📭
+              </div>
+
+              <h3 class="text-2xl font-bold text-slate-950">
+                No Messages Found
+              </h3>
+
+              <p class="mt-3 leading-7 text-slate-600">
+                Your operational inbox is currently clear with no pending updates.
+              </p>
+
+              <button
+                class="mt-6 inline-flex min-h-[44px] items-center justify-center rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-blue-500 hover:text-blue-600">
                 Refresh Inbox
               </button>
-            </div>
 
-            <div class="panel state-card">
-              <!-- error -->
-              <h3>Sync Failed</h3>
-              <p>Unable to retrieve project metrics.</p>
+            </article>
 
-              <button class="error-button">
+            <article class="rounded-2xl border border-red-200 bg-white p-6 shadow-sm">
+
+              <div
+                class="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-red-100 text-2xl text-red-600">
+                ⚠️
+              </div>
+
+              <h3 class="text-2xl font-bold text-slate-950">
+                Sync Failed
+              </h3>
+
+              <p class="mt-3 leading-7 text-slate-600">
+                Unable to retrieve project metrics from the analytics service.
+              </p>
+
+              <button
+                class="mt-6 inline-flex min-h-[44px] items-center justify-center rounded-xl bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-700">
                 Retry Sync
               </button>
-            </div>
+
+            </article>
 
           </div>
+
         </section>
+
         <!-- Footer -->
-        <footer class="dashboard-footer">
-          <p>PulseDesk Dashboard V1</p>
-          <span>Built with HTML and modern CSS.</span>
+        <footer class="mt-10 border-t border-slate-200 py-6">
+
+          <div class="flex flex-col gap-4 text-sm text-slate-500 md:flex-row md:items-center md:justify-between">
+
+            <div>
+
+              <p class="font-semibold text-slate-700">
+                PulseDesk Dashboard V2
+              </p>
+
+              <p class="mt-1">
+                Built with semantic HTML and Tailwind CSS v4.
+              </p>
+
+            </div>
+
+            <nav aria-label="Footer navigation">
+
+              <ul class="flex flex-wrap gap-4">
+
+                <li>
+                  <a href="#dashboard" class="transition hover:text-blue-600">
+                    Dashboard
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#projects" class="transition hover:text-blue-600">
+                    Projects
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#messages" class="transition hover:text-blue-600">
+                    Messages
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#settings" class="transition hover:text-blue-600">
+                    Settings
+                  </a>
+                </li>
+
+              </ul>
+
+            </nav>
+
+          </div>
+
         </footer>
+
       </main>
 
     </div>
 
-    </main>
   </div>
+
 </body>
 
 </html>
